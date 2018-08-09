@@ -133,7 +133,7 @@ internal class BannerView {
             return view is LinearLayout
         }
 
-        override fun onInterceptTouchEvent(parent: CoordinatorLayout?, child: View?, event: MotionEvent): Boolean {
+        override fun onInterceptTouchEvent(parent: CoordinatorLayout, child: View, event: MotionEvent): Boolean {
             if (parent?.isPointInChildBounds(child, event.x.toInt(), event.y.toInt()) == true) {
                 when (event.actionMasked) {
                     ACTION_DOWN -> cancelAllSchedule()
